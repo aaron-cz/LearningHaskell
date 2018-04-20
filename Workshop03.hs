@@ -22,7 +22,7 @@ quickSort (x:xs)   = (quickSort left) ++ [x] ++ (quickSort right)
         left  = filter (<  x) xs
         right = filter (>= x) xs
 
--- Q6 same_shape
+-- Q6 same_shape by Bob
 -- given data structure:
 data Tree k v = Leaf | Node k v (Tree k v) (Tree k v)
      deriving (Eq, Show)
