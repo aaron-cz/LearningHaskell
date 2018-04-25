@@ -33,6 +33,7 @@ sqrtNN xs = map (fromJust) (filter (not . isNothing) (map sqrt' xs))
           sqrt' a
             | a >= 0 = Just (sqrt a)
             | a <  0 = Nothing
+
 sqrtFold :: (Floating a, Ord a) => [a] -> [a]
 sqrtFold xs = foldr (maybeAppend) [] xs
     where maybeAppend :: (Floating a, Ord a) => a -> [a] -> [a]
