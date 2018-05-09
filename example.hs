@@ -1,3 +1,5 @@
+import System.IO.Unsafe
+
 -- defining data type
 data Gender = Male  | Female
 data Role   = Staff | Student
@@ -23,3 +25,10 @@ myReverse (x:xs) = (myReverse xs) ++ [x]
 -- myXOR :: Bool->Bool->Bool
 myXOR :: Bool->Bool->Bool
 myXOR a b = (a /= b)
+
+
+-- unsafeIO
+unsafeSum :: Int -> Int -> Int
+unsafeSum x y = unsafePerformIO $ do
+    putStrLn ("summing " ++ (show x) ++ " and " ++ (show y))
+    return (x + y)
