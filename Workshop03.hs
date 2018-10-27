@@ -34,4 +34,21 @@ same_shape (Node _ _ _ _) Leaf  = False
 same_shape (Node _ _ l r) (Node _ _ l' r')
             = (same_shape l l') && (same_shape r r')
 
--- Q7 (ignored)
+-- Q7 eval Expression
+data Expression = Var Variable
+                | Num Integer
+                | Plus Expression Expression
+                | Minus Expression Expression
+                | Times Expression Expression
+                | Div Expression Expression
+
+data Variable = A | B
+
+eval :: Integer -> Integer -> Expression -> Integer
+eval a b (Var A) = a
+eval a b (Var B) = b
+eval a b (Num n) = n
+eval a b (Plus  x y) = (eval a b x) + (eval a b y)
+eval a b (Minus x y) = (eval a b x) - (eval a b y)
+eval a b (Times x y) = (eval a b x) * (eval a b y)
+eval a b (Div   x y) = div (eval a b x) (eval a b y)

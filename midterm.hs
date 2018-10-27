@@ -1,12 +1,7 @@
 import Data.List
 
 -- showMtree :: Show a => Mtree a -> String
-data Mtree a = Mnode a [Mtree a]
-showMtree :: Show a => Mtree a -> String
-showMtree (Mnode v []) = show v ++ "\n"
-showMtree (Mnode v xs) = (show v) ++ "\n"
-                         ++ foldl (++) [] (map (((++) " ") . showMtree) xs)
-
+-- See workshop11 Question 5.
 
 -- 7 Problem 7
 -- (**) Flatten a nested list structure.
@@ -46,9 +41,7 @@ encode xs = map summary (pack' xs)
     where summary :: (Eq a) => [a] -> (Int, a)
           summary x = (length x, head x)
 
--- PointFree
--- ?????????
--- mySum = foldl (+) 0
+
 
 -- Problem 16
 -- (**) Drop every N'th element from a list.

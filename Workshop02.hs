@@ -1,4 +1,4 @@
--- Q1 high level description of 5 different possible representatios
+-- Q1 high level description of 5 different possible representations
 --    of playing cards from a standard 52 card deck.
 -- A1.1: 52 different values
 -- A1.2: 13 * 4 different values that could be
@@ -18,14 +18,14 @@ factorial 0 = [0]
 factorial x = factorialFrom 1 x where
     factorialFrom x y
         | x > y                   = []
-        | dividible x y           = x:factorialFrom (x+1) y
+        | dividable x y           = x:factorialFrom (x+1) y
         | otherwise               = factorialFrom (x+1) y
-dividible :: (Ord a, Num a) => a -> a -> Bool
-dividible 0 0   = False
-dividible _ 0   = True
-dividible x y
+dividable :: (Ord a, Num a) => a -> a -> Bool
+dividable 0 0   = False
+dividable _ 0   = True
+dividable x y
     | x <= 0 || x > y   = False
-    | otherwise         = dividible x (y-x)
+    | otherwise         = dividable x (y-x)
 
 
 -- Q4 'elem a [a]'
@@ -42,5 +42,24 @@ longestPrefix (x:xs) (y:ys)
     | x == y    = x:(longestPrefix xs ys)
     | otherwise = []
 
--- Q6 TODO conversion between C and Haskell
--- ????????????????????????????????????????
+-- Q6 conversion of C code
+mcCarthy_91 :: Int -> Int
+mcCarthy_91 n = 
+    let c = 1 
+    in  myLoop c n
+
+myLoop :: Int -> Int -> Int
+myLoop 0 n = n
+myLoop c n = if (n > 100) then myLoop (c - 1) (n - 10)
+             else myLoop (c + 1) (n + 11)
+
+-- Q7 min to max
+minToMax lower upper = [lower..upper]
+
+min2Max :: Int -> Int -> [Int]
+min2Max lower upper
+    | lower > upper = []
+    | otherwise     = lower:(min2Max (lower+1) upper)
+
+
+     

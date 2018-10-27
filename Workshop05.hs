@@ -26,7 +26,7 @@ sqrtPM x
   | otherwise = []
 
 -- Q5 by Bob
--- ?????????
+
 sqrtNN :: (Floating a, Ord a) => [a] -> [a]
 sqrtNN xs = map (fromJust) (filter (not . isNothing) (map sqrt' xs))
     where sqrt' :: (Floating a, Ord a) => a -> Maybe a

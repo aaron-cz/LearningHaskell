@@ -32,3 +32,11 @@ unsafeSum :: Int -> Int -> Int
 unsafeSum x y = unsafePerformIO $ do
     putStrLn ("summing " ++ (show x) ++ " and " ++ (show y))
     return (x + y)
+
+-- recycle
+recycle :: [t] -> [t]
+recycle l = recycleN [1..] l
+
+recycleN :: [a] -> [b] -> [b]
+recycleN [] l = []
+recycleN (n:ns) l = l ++ (recycleN ns l)
