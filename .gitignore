@@ -1,0 +1,5 @@
+.stack-work/
+s118-workshops.cabal
+*~
+.git/
+README.md
