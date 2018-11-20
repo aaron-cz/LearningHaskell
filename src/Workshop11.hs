@@ -1,3 +1,5 @@
+module Workshop11 where
+
 -- Q1 fibs :: Int -> [Integer]
 fibs :: Int -> [Integer]
 fibs 0 = []

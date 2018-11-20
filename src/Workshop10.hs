@@ -1,3 +1,5 @@
+module Workshop10 where
+
 -- import Data.List
 import Data.Maybe
 import Data.Char

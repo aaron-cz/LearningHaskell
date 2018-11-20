@@ -1,3 +1,5 @@
+module Workshop04 where
+
 -- - Q1 Tree Sort
 data Tree a = Empty | Node (Tree a) a (Tree a)
 makebst :: (Ord a) => a -> Tree a -> Tree a

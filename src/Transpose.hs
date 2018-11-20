@@ -1,3 +1,5 @@
+module Transpose where
+
 transpose :: [[x]] -> [[x]]
 transpose array = 
           let nempty [] = False

@@ -1,3 +1,5 @@
+module example where
+
 import System.IO.Unsafe
 
 -- defining data type

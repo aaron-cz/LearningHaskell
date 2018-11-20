@@ -1,3 +1,5 @@
+module Workshop02 where
+
 -- Q1 high level description of 5 different possible representations
 --    of playing cards from a standard 52 card deck.
 -- A1.1: 52 different values

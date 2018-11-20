@@ -1,3 +1,5 @@
+module Workshop05 where
+
 import Data.Maybe
 
 -- Q1: maybeApply [fmap]

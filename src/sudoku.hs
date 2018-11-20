@@ -1,3 +1,5 @@
+module sudoku where
+
 import Data.Set
 
 data Unit = Set Int | Singleton Int | Nil 

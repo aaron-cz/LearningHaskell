@@ -1,3 +1,5 @@
+module Workshop03 where
+
 -- Q2
 -- ftoc :: Double -> Double
 ftoc f = (5/9) * (f - 32)
