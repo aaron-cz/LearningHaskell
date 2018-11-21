@@ -1,5 +1,3 @@
-module midterm where
-
 import Data.List
 
 -- showMtree :: Show a => Mtree a -> String

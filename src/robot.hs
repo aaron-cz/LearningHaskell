@@ -1,6 +1,4 @@
 
-module robot where
-
 data Dir = South | North | West | East | Shoot
     -- !! missing from final exam
     deriving (Eq, Show)
